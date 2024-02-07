@@ -1,0 +1,300 @@
+:root {
+  /* Primary */
+  --nutmeg: hsl(14, 45%, 36%);
+  --dark-raspberry: hsl(332, 51%, 32%);
+
+  /* Neutral */
+  --white: hsl(0, 0%, 100%);
+  --rose-white: hsl(330, 100%, 98%);
+  --eggshell: hsl(30, 54%, 90%);
+  --light-grey: hsl(30, 18%, 87%);
+  --wenge-brown: hsl(30, 10%, 34%);
+  --dark-charcoal: hsl(24, 5%, 18%);
+
+  /* Font */
+  --ff-primary: "Outfit", sans-serif;
+  --ff-accent: "Young Serif", serif;
+
+  --fw-primary-400: 400;
+  --fw-primary-600: 600;
+  --fw-primary-700: 700;
+
+  --fw-accent-400: 400;
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+  padding: 0;
+}
+/*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+body {
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+    5. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+    6. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+    7. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* Main Styles */
+html {
+  font-size: 50%;
+}
+
+body {
+  font-size: 2rem;
+  font-family: var(--ff-primary);
+}
+
+main {
+  background-color: var(--eggshell);
+  min-height: 100vh;
+}
+
+h1,
+h2 {
+  font-family: var(--ff-accent);
+}
+
+ul,
+ol {
+  padding: 0;
+}
+
+.heading-secondary {
+  color: var(--nutmeg);
+  margin-bottom: 3rem;
+}
+
+.recipe {
+  background-color: var(--white);
+}
+
+.container {
+  margin-inline: auto;
+  padding: 4rem;
+}
+
+.recipe .heading-primary {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+  color: var(--dark-charcoal);
+}
+
+.recipe .recipe-text {
+  font-size: 1.5rem;
+  color: var(--dark-charcoal);
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+.recipe-prep {
+  background-color: var(--rose-white);
+  padding: 2rem;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  margin-bottom: 4rem;
+}
+
+.recipe-prep h3 {
+  color: var(--dark-raspberry);
+  margin-bottom: 2rem;
+}
+
+.recipe-prep ul {
+  padding-inline-start: 4rem;
+}
+
+.recipe-prep li {
+  color: var(--dark-charcoal);
+  padding-left: 1.5rem;
+  line-height: 1.5;
+  margin-block: 1rem;
+}
+
+.recipe-prep li strong {
+  color: var(--wenge-brown);
+}
+
+.recipe .ingredients {
+  margin-bottom: 2.5rem;
+}
+
+.recipe .ingredients ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  color: var(--dark-charcoal);
+  padding-left: 3.5rem;
+}
+
+.recipe .ingredients ul li {
+  line-height: 1.2;
+  padding-left: 1.5rem;
+}
+
+hr {
+  border-top: 1px solid var(--light-grey);
+  margin-block: 4rem;
+}
+
+.recipe .instructions ol {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-left: 3rem;
+}
+
+.recipe .instructions ol li {
+  padding-left: 1.5rem;
+  line-height: 1.2;
+  color: var(--dark-charcoal);
+}
+
+.recipe .instructions ol li::marker {
+  color: var(--nutmeg);
+  font-weight: var(--fw-primary-600);
+}
+
+.nutrition p {
+  color: var(--dark-charcoal);
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+  color: var(--nutmeg);
+}
+
+td {
+  color: var(--dark-charcoal);
+}
+
+td,
+th {
+  text-align: left;
+  padding: 1.5rem 4rem;
+}
+
+tr:not(:last-child) {
+  border-bottom: 1px solid var(--light-grey);
+}
+
+.attribution {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-block: 5rem;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  text-decoration: none;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+}
+
+.attribution a:hover {
+  color: var(--nutmeg);
+  text-decoration: underline;
+}
+
+@media (min-width: 48em) {
+  html {
+    font-size: 56.25%;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .recipe-img {
+    overflow: hidden;
+    margin: 4rem 4rem 0 4rem;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+  }
+
+  .recipe-img img {
+    width: 100%;
+  }
+
+  .recipe {
+    overflow: hidden;
+    margin-block: 10rem;
+    max-width: 80rem;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+  }
+}
+
+@media (min-width: 64em) {
+  html {
+    font-size: 62.5%;
+  }
+
+  .recipe {
+    max-width: 70rem;
+  }
+}
